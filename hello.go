@@ -13,7 +13,12 @@ func Hello(name string) string {
 	return fmt.Sprintf("Hello, %s!", n)
 }
 
+// HelloWorld greeting
+func HelloWorld() string {
+	return Hello("world")
+}
+
 // Version of the application
 func Version() string {
-	return "v1.1.0"
+	return "v1.2.0"
 }

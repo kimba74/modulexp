@@ -2,6 +2,13 @@ package modulexp
 
 import "testing"
 
+func TestHelloWorld(t *testing.T) {
+	want := "Hello, world!"
+	if got := HelloWorld(); got != want {
+		t.Errorf("HelloWorld()=%q; want=%q", got, want)
+	}
+}
+
 func TestHelloSpencer(t *testing.T) {
 	want := "Hello, Spencer!"
 	if got := Hello("Spencer"); got != want {
@@ -17,7 +24,7 @@ func TestHelloYou(t *testing.T) {
 }
 
 func TestVersion(t *testing.T) {
-	want := "v1.1.0"
+	want := "v1.2.0"
 	if got := Version(); got != want {
 		t.Errorf("Version()=%q; want=%q", got, want)
 	}
