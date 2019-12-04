@@ -9,8 +9,15 @@ func TestHelloSpencer(t *testing.T) {
 	}
 }
 
+func TestHelloYou(t *testing.T) {
+	want := "Hello, you!"
+	if got := Hello(""); got != want {
+		t.Errorf("Hello(\"\")=%q; want=%q", got, want)
+	}
+}
+
 func TestVersion(t *testing.T) {
-	want := "v1.0.0"
+	want := "v1.1.0"
 	if got := Version(); got != want {
 		t.Errorf("Version()=%q; want=%q", got, want)
 	}
